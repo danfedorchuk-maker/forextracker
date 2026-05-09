@@ -1,0 +1,9 @@
+{
+  "name": "forextracker",
+  "version": "1.0.0",
+  "description": "Canadian Forex Tax Reporting for MT4 Traders",
+  "private": true,
+  "dependencies": {
+    "stripe": "^14.21.0"
+  }
+}
