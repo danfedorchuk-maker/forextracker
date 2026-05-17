@@ -4,6 +4,7 @@
   "description": "Canadian Forex Tax Reporting for MT4 Traders",
   "private": true,
   "dependencies": {
-    "stripe": "^14.21.0"
+    "stripe": "^14.21.0",
+    "@vercel/kv": "^1.0.0"
   }
 }
