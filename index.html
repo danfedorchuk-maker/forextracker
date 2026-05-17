@@ -403,7 +403,11 @@ async function startCheckout() {
   }
 }
 
-function grantAdminAccess() { localStorage.setItem('ft_paid', '1'); history.replaceState({}, '', location.pathname); showApp(); }
+function grantAdminAccess() {
+  const pwd = prompt('Enter admin password:');
+  if (pwd !== 'HorizonAdmin2026') { alert('Wrong password.'); return; }
+  localStorage.setItem('ft_paid', '1'); history.replaceState({}, '', location.pathname); showApp();
+}
 function showLanding(err) { document.getElementById('loading').classList.add('hidden'); document.getElementById('landing').classList.remove('hidden'); document.getElementById('app').classList.add('hidden'); if (err) setLandingError(err); }
 function setLandingError(msg) { const el = document.getElementById('lnd-error'); el.textContent = msg; el.classList.remove('hidden'); }
 function showApp() { document.getElementById('loading').classList.add('hidden'); document.getElementById('landing').classList.add('hidden'); document.getElementById('app').classList.remove('hidden'); loadTrades(); }
